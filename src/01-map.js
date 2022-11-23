@@ -25,7 +25,7 @@ const mapSongTitles = ( songs ) => songs.map( song => song.title ) // a new arra
  * 
  *  MUST USE '.map()'
  */
-const mapSongDetails = (songs) => {};
+const mapSongDetails = (songs) => songs.map( song => `${song.title} by ${song.artist}` ) // new array with song title and artist
 
 /**
  * Returns an array of objects, where each object has a key that is the song title and has a value that is the song artist.
