@@ -49,7 +49,9 @@ const mapTitleAndArtist = (songs) => songs.map( song => ({[song.title] : song.ar
  * Remember that the parameters for '.map()' include '.map( (element, index, array) {/__/});'
  * 
  */
-const mapArrayValuesSquaredTimesIndex = (nums) => {};
+const mapArrayValuesSquaredTimesIndex = (nums) => nums.map( ( number,index ) => Math.pow(number,2) * index )
+
+// array with square the number in the array and multiply by index
 
 /**
  * Returns an array of strings, where each string is uppercased.
