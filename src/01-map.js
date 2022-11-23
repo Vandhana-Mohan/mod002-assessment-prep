@@ -50,7 +50,6 @@ const mapTitleAndArtist = (songs) => songs.map( song => ({[song.title] : song.ar
  * 
  */
 const mapArrayValuesSquaredTimesIndex = (nums) => nums.map( ( number,index ) => Math.pow(number,2) * index )
-
 // array with square the number in the array and multiply by index
 
 /**
@@ -58,7 +57,7 @@ const mapArrayValuesSquaredTimesIndex = (nums) => nums.map( ( number,index ) => 
  * @param {string[]} words - An array of strings.
  * @returns {string} An array of strings. 
  */
-const mapArrayWordsUpperCased = (words) => {};
+const mapArrayWordsUpperCased = (words) => words.map( word => word.toUpperCase() ) // array with all strings in uppercase
 
 /**
  * countByType()
