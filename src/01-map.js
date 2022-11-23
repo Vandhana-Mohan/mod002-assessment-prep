@@ -38,7 +38,7 @@ const mapSongDetails = (songs) => songs.map( song => `${song.title} by ${song.ar
  * 
  * MUST USE '.map()'
  */
-const mapTitleAndArtist = (songs) => {};
+const mapTitleAndArtist = (songs) => songs.map( song => ({[song.title] : song.artist})) // Array of Objects with song title as key and song artist as value
 
 /**
  * Returns an array of numbers, where each object is squared and then multiplied by their index.
