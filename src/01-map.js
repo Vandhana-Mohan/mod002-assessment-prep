@@ -62,9 +62,11 @@ const mapArrayWordsUpperCased = (words) => words.map( word => word.toUpperCase()
 /**
  * countByType()
  * -----------------------------
- * Returns an object where the keys are Pokemon types and the values are the number of Pokemon in the array with that type. If the inputted `pokemon` array is empty, return `{}`.
+ * Returns an object where the keys are Pokemon types and the values are the number of Pokemon in the array with that type. 
+ * If the inputted `pokemon` array is empty, return `{}`.
  * @param {Object[]} pokemon - An array of Pokemon. See the `poke.js` file for an example of this array.
- * @returns {Object} An object where keys are Pokemon types (e.g. "Water") and the values are how many Pokemon in the array have that type (e.g. 22).
+ * @returns {Object} An object where keys are Pokemon types (e.g. "Water") and the values are how many Pokemon in 
+ * the array have that type (e.g. 22).
  *
  * EXAMPLE:
  *  countByType(pokemon);
@@ -88,7 +90,15 @@ const mapArrayWordsUpperCased = (words) => words.map( word => word.toUpperCase()
         Dragon: 3
     };
  */
-const mapCountByType = (pokemon) => {};
+const mapCountByType = (pokemon) => {
+    let pokeObj = {}
+    pokemon.map(poke => poke.type).flat().forEach(count => pokeObj[count] = (pokeObj[count] || 0) + 1)
+    return pokeObj
+} 
+ // using map because its mandatory, map returns a nested array of array, so using flat() to create a new array all concatenated
+ // now using forEach to count duplicates - used a new style
+ // instead of using forEach, we can use reduce() and instead of using map and flat, we can use .flatMap
+ // -----------------------------------
 
 /**
  * getAverageTotalStatScore()
@@ -102,7 +112,7 @@ const mapCountByType = (pokemon) => {};
  *  getAverageTotalStatScore(pokemon);
  *  //> 407.22
  */
-const mapAverageTotalStatScore = (pokemon) => {};
+ const mapAverageTotalStatScore = (pokemon) => {}
 
 /**
  * getHighestAttackStatScore()
