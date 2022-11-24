@@ -112,7 +112,10 @@ const mapCountByType = (pokemon) => {
  *  getAverageTotalStatScore(pokemon);
  *  //> 407.22
  */
- const mapAverageTotalStatScore = (pokemon) => {}
+ const mapAverageTotalStatScore = (pokemon) => pokemon.map(e => e.stats[0]).reduce((a,c) => a + c.value, 0) / pokemon.length || 0
+
+ //const mapAverageTotalStatScore = (pokemon) => console.log(pokemon.map(e => e.stats.filter(f => f.category === 'total').reduce((a,c) => a + c.value, 0)) / pokemon.length || 0)
+ // using map to access stats[0] which is total and then calculate average using reduce with the values 
 
 /**
  * getHighestAttackStatScore()
