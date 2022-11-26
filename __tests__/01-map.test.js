@@ -20,7 +20,7 @@ console.log(`
 |--| || Let's .map()! ||
 |  | |'---------------'|
 |__|~')_______________('
-`)
+`);
 
 describe("mapSongTitles()", () => {
     let songs;
@@ -276,5 +276,4 @@ describe("mapHighestAttackScore", () => {
     const expected = 137;
     expect(characterMatch).toBeCloseTo(expected, 140)
   });
-
 });

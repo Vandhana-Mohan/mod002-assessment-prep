@@ -6,6 +6,10 @@
  const examplePokemon = require("../data/poke");
  const movies = require("../data/movies");
  const moreMovies = require("../data/alternative-movies");
+ const rickMorty = require("../data/rickMorty");
+
+ // The lines above connect the data stored in the 'data' folder to this file.  
+
 /**
  * Returns an array of all songs by the artist "Saib".
  * @param {Object[]} songs - An array of songs. See the song data for more.
@@ -81,6 +85,10 @@ const filterByGenre = (movies, genre) => movies.filter(movie => movie.genre.toLo
 
  const filterByDirector = (movies, director) => movies.filter(movie => movie.director === director) || []
 
+const filterCharactersBySpecies = (rickMorty, species) => {
+    return rickMorty.filter( char => char.id < 10 );
+};
+
 module.exports = {
     filterSongsBySaib,
     filterSongsOverThreeMinutes,
@@ -89,4 +97,5 @@ module.exports = {
     filterByGenre,
     filterAllMoviesReleasedAtOrBeforeYear,
     filterByDirector,
+    filterCharactersBySpecies,
 };
