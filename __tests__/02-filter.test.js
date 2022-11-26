@@ -158,7 +158,7 @@ describe("filterTitleTracks()", () => {
 
 });
 
-describe.only("filterNumsLessThan5()", () => {
+describe("filterNumsLessThan5()", () => {
 
     test("should use the `.filter()` method", () => {
         const hasFilter = !!filterNumsLessThan5.toString().match(/\.filter(\s*\(|\()/g);

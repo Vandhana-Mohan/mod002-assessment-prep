@@ -1,18 +1,16 @@
-## How it felt writing this up
-
-<img src="https://media.giphy.com/media/wGEymBvo6FUlR9bbda/giphy-downsized-large.gif" style="height: 250px; width: 220px"/>
+# How it felt writing this up
 
 <img src="https://media.giphy.com/media/K7StRcr7hagJpXROmb/giphy.gif" style="height: 250px; width: 220px"/>
 
 
-I Have many more gifs to share with you about programming but..
 # Let's get started!!
 
-# WARNING THIS REPO IS NOT YET FINISHED !!!
-but feel free to enjoy the bugs xD
+# WARNING: This repo is a work-in-progress..
+But feel free to enjoy the bugs. Report them if you experience any.
 ## Prep setup
 
-### Getting started
+### Getting started ..
+The same as we have been doing all along.
 
 1. Fork and clone this repository.
 
@@ -41,7 +39,4 @@ npm test 02-filter.test.js
 ```
 and so on...
 
-WARNING!
-I HAVE ONLY MANAGED TO GET UP TO 03-forEach.js
-THE REST OF THE FILES WILL HAVE TO WAIT AFTER I FINISH WORKING!
-FORK AND CLONE THIS REPO work on it as you like. I'll prolly finish by Friday night. If you wanna see me finish this up. Join me on Discord. I stream there nightly....sometimes.....maybe?
+Solve the functions however you want, but use the functions that are needed in each test.
