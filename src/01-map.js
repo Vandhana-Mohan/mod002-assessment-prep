@@ -128,7 +128,7 @@ const mapCountByType = (pokemon) => {
  *  getHighestAttackStatScore(pokemon);
  *  //> 134
  */
- const mapHighestAttackScore = (pokemon) => pokemon.map( poke => poke.stats[2].value ).reduce((acc, cPoke) => Math.max(acc, cPoke), 0)
+ const mapHighestAttackScore = (pokemon) => pokemon.map(pokeAtack => pokeAtack.stats[2].value).reduce((accumulator,currentPoke) => Math.max(accumulator,currentPoke), 0)
  
 
  module.exports = {
