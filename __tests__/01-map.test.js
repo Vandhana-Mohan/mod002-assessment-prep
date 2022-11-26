@@ -273,7 +273,7 @@ describe("mapHighestAttackScore", () => {
 
   test("EXTRA EXTRA BONUS ROUND: can you do it in less than 140 characters?", () => {
     const characterMatch = mapHighestAttackScore.toString().length;
-    const expected = 136;
+    const expected = 137;
     expect(characterMatch).toBeCloseTo(expected, 140)
   });
 

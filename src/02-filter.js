@@ -11,23 +11,26 @@
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-const filterSongsBySaib = (songs) => {};
+const filterSongsBySaib = (songs) => songs.filter(song => song.artist === 'Saib') // filter the songs array to get Saib songs
 
 /**
  * Returns an array of all songs where the runtime is over three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-const filterSongsOverThreeMinutes = (songs) => {};
+const filterSongsOverThreeMinutes = (songs) => songs.filter(song => song.runtimeInSeconds > 180)
+
+// filter the songs array to get all songs > 180 seconds or 3 minutes
 
 /**
  * Returns an array of songs where the song title is the same as the song album.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-const filterTitleTracks = (songs) => {};
+ const filterTitleTracks = (songs) => songs.filter(song => song.title === song.album)
+ // filter songs array to get all songs where title is same as album
 
-const filterNumsLessThan5 = (nums) => {};
+ const filterNumsLessThan5 = (nums) => nums.filter(number => number < 5)
 
 /**
  * filterByGenre()
@@ -49,7 +52,7 @@ const filterNumsLessThan5 = (nums) => {};
 *  filterByGenre(movies, "Horror")
 *  //> []
 */
-const filterByGenre = (movies, genre) => {};
+const filterByGenre = (movies, genre) => movies.filter(movie => movie.genre.toLowerCase().includes(genre.toLowerCase()))
 
 /**
  * getAllMoviesReleasedAtOrBeforeYear()
@@ -73,9 +76,10 @@ const filterByGenre = (movies, genre) => {};
     }
     ];
 */
-const filterAllMoviesReleasedAtOrBeforeYear = (movies, year) => {};
+ const filterAllMoviesReleasedAtOrBeforeYear = (movies, year) => movies.filter(movie => movie.released.slice(-4) <= year) || []
+ 
 
-const filterByDirector = (movies, director) => {};
+ const filterByDirector = (movies, director) => movies.filter(movie => movie.director === director) || []
 
 module.exports = {
     filterSongsBySaib,

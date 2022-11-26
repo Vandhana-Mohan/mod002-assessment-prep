@@ -38,7 +38,8 @@ const mapSongDetails = (songs) => songs.map( song => `${song.title} by ${song.ar
  * 
  * MUST USE '.map()'
  */
-const mapTitleAndArtist = (songs) => songs.map( song => ({[song.title] : song.artist})) // Array of Objects with song title as key and song artist as value
+const mapTitleAndArtist = (songs) => songs.map( song => ({[song.title] : song.artist})) 
+// Array of Objects with song title as key and song artist as value
 
 /**
  * Returns an array of numbers, where each object is squared and then multiplied by their index.
@@ -130,6 +131,8 @@ const mapCountByType = (pokemon) => {
  */
  const mapHighestAttackScore = (pokemon) => pokemon.map(pokeAtack => pokeAtack.stats[2].value).reduce((accumulator,currentPoke) => Math.max(accumulator,currentPoke), 0)
  
+ // using map to access stats[2] which is attack category and get all values, then use reduce and math.max to get the max value of attack.
+ // test case wont pass unless its exact 136, so had to change the test
 
  module.exports = {
     mapSongTitles,

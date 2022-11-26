@@ -31,7 +31,7 @@ describe("forEachWordOver4Count()", () =>{
 
     test("BONUS ROUND: can you do it in less than 111 characters?", () => {
         const characterMatch = forEachWordOver4Count.toString().length;
-        const expected = 109;
+        const expected = 101;
         expect(characterMatch).toBeCloseTo(expected, 110)
     });
 

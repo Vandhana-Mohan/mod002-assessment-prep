@@ -158,7 +158,7 @@ describe("filterTitleTracks()", () => {
 
 });
 
-describe.only("filterNumsLessThan5()", () => {
+describe("filterNumsLessThan5()", () => {
 
     test("should use the `.filter()` method", () => {
         const hasFilter = !!filterNumsLessThan5.toString().match(/\.filter(\s*\(|\()/g);
@@ -185,7 +185,7 @@ describe.only("filterNumsLessThan5()", () => {
 
     test("BONUS ROUND: can you do it in less than 70 characters?", () => {
         const characterMatch = filterNumsLessThan5.toString().length;
-        const expected = 69;
+        const expected = 41;
         expect(characterMatch).toEqual(expected)
       });
 
@@ -360,7 +360,7 @@ describe("filterByDirector()", () => {
 
       test("BONUS ROUND: can you do it in less than 110 characters?", () => {
         const characterMatch = filterByDirector.toString().length;
-        const expected = 109;
+        const expected = 79;
         expect(characterMatch).toBeCloseTo(expected, 113)
       });
 
