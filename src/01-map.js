@@ -112,12 +112,12 @@ const mapCountByType = (pokemon) => {
  *  getAverageTotalStatScore(pokemon);
  *  //> 407.22
  */
- const mapAverageTotalStatScore = (pokemon) => pokemon.map(e => e.stats[0]).reduce((a,c) => a + c.value, 0) / pokemon.length || 0
+ const mapAverageTotalStatScore = (pokemon) => pokemon.map(poke => poke.stats[0]).reduce((a,c) => a + c.value, 0) / pokemon.length || 0
 
  //const mapAverageTotalStatScore = (pokemon) => console.log(pokemon.map(e => e.stats.filter(f => f.category === 'total').reduce((a,c) => a + c.value, 0)) / pokemon.length || 0)
  // using map to access stats[0] which is total and then calculate average using reduce with the values 
 
-/**
+ /**
  * getHighestAttackStatScore()
  * -----------------------------
  * Returns the highest `attack` stat score among all Pokemon. If the inputted `pokemon` array is empty, return `0`.
@@ -128,9 +128,10 @@ const mapCountByType = (pokemon) => {
  *  getHighestAttackStatScore(pokemon);
  *  //> 134
  */
-const mapHighestAttackScore = (pokemon) => {};
+ const mapHighestAttackScore = (pokemon) => pokemon.map( poke => poke.stats[2].value ).reduce((acc, cPoke) => Math.max(acc, cPoke), 0)
+ 
 
-module.exports = {
+ module.exports = {
     mapSongTitles,
     mapSongDetails,
     mapTitleAndArtist,
