@@ -23,8 +23,18 @@
  *  findTheLongestDinosaur(dinosaurs);
  *  OUTPUT -> // { Brachiosaurus: 98.43 }
  */
- const findTheLongestDinosaur = (dinosaurs) => {};
+ 
+ const findTheLongestDinosaur = (dinosaurs) => {
 
+  if(!dinosaurs.length){
+    throw "no dinosaurs"
+  }
+  
+  let longest = dinosaurs.reduce((acc,dino) => acc > dino.lengthInMeters, 0)
+  
+  return 
+ }
+ 
 /**
  * findTheShortestDinosaur()
  * ---------------------
@@ -67,7 +77,7 @@
  *  findThePokemonWithTheHighestAttackScore(pokemon);
  *  OUTPUT -> // { pokemonName: AttackScore }
  */
- const findThePokemonWithTheHighestAttackScore = (pokemon) => {};
+ const findThePokemonWithTheHighestAttackScore = (pokemon) => {}
 
  /**
  * findThePokemonWithTheLowestAttackScore()
@@ -98,7 +108,7 @@
  * typeof pokemon.national_number = 'string'
  * 
  */
- const findPokemonByNationalNumber = (pokemon, number) => {};
+ const findPokemonByNationalNumber = (pokemon, number) => pokemon.find(poke => Number(poke.national_number) === number) || {}
 
  /**
  * findThePokemonByName()
@@ -112,7 +122,7 @@
  *  findThePokemonByName(pokemon, name);
  *  OUTPUT -> // { pokemonName: pokeObj.type[0] }
  */
- const findPokemonByName = (pokemon, name) => {};
+ const findPokemonByName = (pokemon, name) => pokemon.find(poke => poke.name === name) || {}
 
  /**
  * findThePokemonByEvolution()

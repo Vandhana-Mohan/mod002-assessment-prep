@@ -82,13 +82,12 @@ const filterByGenre = (movies, genre) => movies.filter(movie => movie.genre.toLo
 */
  const filterAllMoviesReleasedAtOrBeforeYear = (movies, year) => movies.filter(movie => movie.released.slice(-4) <= year) || []
  
-
  const filterByDirector = (movies, director) => movies.filter(movie => movie.director === director) || []
 
-const filterCharactersBySpecies = (rickMorty, species) => {
+ const filterCharactersBySpecies = (rickMorty, species) => {
     return rickMorty.filter( char => char.id < 10 );
-};
-
+ };
+ 
 module.exports = {
     filterSongsBySaib,
     filterSongsOverThreeMinutes,
