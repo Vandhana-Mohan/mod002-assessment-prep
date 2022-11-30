@@ -1,9 +1,9 @@
 /**
  * DON'T TOUCH THE LINES BELOW!!!
  */
-const songData = require("../data/songs");
+const song = require("../data/songs"); 
 const { nums, words } = require("../data/data");
-const examplePokemon = require("../data/poke");
+const pokemon = require("../data/poke");
 
 /**
  * Returns an array of all of the song titles.

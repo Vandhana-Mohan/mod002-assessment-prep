@@ -11,7 +11,7 @@ const {
 
 const { nums, words } = require("../data/data.js");
 const pokemon = require("../data/poke");
-const shuffledPokemon = require("../data/poke_remix");
+const shuffledPokemon = require("../data/poke_remix"); 
 
 console.log(`
 .--.
@@ -19,6 +19,7 @@ console.log(`
 |=.| |.---------------.|
 |--| || Let's .map()! ||
 |  | |'---------------'|
+|  | |     compaq      |
 |__|~')_______________('
 `);
 
